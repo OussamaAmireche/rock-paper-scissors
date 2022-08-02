@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+body {
+  margin: 0;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  height: 100vh;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  position: relative;
+}
+.container{
+  max-width: 1320px;
+  margin: auto;
+}
+
+/* Styling the score sheet */
+.score-sheet{
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 50px auto 0;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 20px;
+  padding: 20px;
+}
+.score-sheet > .score{
+  text-align: center;
+  padding: 15px 50px;
+  background-color: white;
+  margin-left: auto;
+  border-radius: 10px;
+}
+.score-sheet > .score > h2{
+  font-size: 4rem;
+  margin: 0;
+  color: hsl(229, 25%, 31%);
+  line-height: 60px;
+}
+.score-sheet > .score > p{
+  margin: 0;
+  color: hsl(229, 64%, 46%);
+}
+@media only screen and (max-width: 767px) {
+  .score-sheet{
+    width: 90%;
+  }
+  .score-sheet > .score{
+    padding: 10px 30px;
+  }
+  .score-sheet > .score > h2{
+    font-size: 3,5rem;
+  }
+  .score-sheet > .score > p{
+    font-size: 14px;
+  }
+  .score-sheet > .logo{
+    width: 20%;
+  }
+  .score-sheet > .logo > img{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .score-sheet > .logo{
+    width: 30%;
+  }
+}
+
+/* Styling the choice component */
+.choice-list{
+  position: relative;
+  width: fit-content;
+  margin: 110px auto 50px;
+}
+.choice-frame{
+  padding: 20px;
+  border-radius: 50%;
+  width: fit-content;
+  border-bottom-width: 7px;
+  border-bottom-style: solid;
+}
+.choice-frame:hover{
+  cursor: pointer;
+}
+.choice{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border-radius: 50%;
+  border-top: 8px solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+/* Styling the rules button */
+.App > .container > button{
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: block;
+  width: fit-content;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+.App > .container > button:hover{
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .App > .container > button{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 30px auto 50px;
+    
+  }
+}
+/* Styling the rules component */
+.rules-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.rules{
+  position: fixed;
+  top: calc(50% - 206px);
+  left: calc(50% - 182px);
+  background-color: white;
+  width: fit-content;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 2;  
+}
+.rules > .row{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.rules > .row > h2{
+  margin: 0;
+  color: hsl(229, 25%, 31%);
+}
+.rules > .row > img{
+  margin-left: auto;
+}
+.rules > .row > img:hover{
+  cursor: pointer;
+}
+/* Styling the game component */
+.game > .row{
+  margin: 20px auto;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.game > .row h5{
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.game > .row > .cpu-choice{
+  margin-left: auto;
+}
+.game > p{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+.game > button{
+  margin: auto;
+  display: block;
+  padding: 15px 50px;
+  letter-spacing: 2px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  border-radius: 7px;
+}
+@media only screen and (max-width: 767px) {
+  .game > .row{
+    width: 90%;
+  }
+}
